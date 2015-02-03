@@ -6,9 +6,10 @@
  * and open the template in the editor.
  */
 
-namespace Zms5Library\TwigExtension\Extension;
+namespace Hopeter1018\TwigExtension\Extension;
 
 use Twig_SimpleFilter;
+use Twig_Extension;
 
 /**
  * Group of text-formatting extension for twig
@@ -16,7 +17,7 @@ use Twig_SimpleFilter;
  * @version $id$
  * @author peter.ho
  */
-class Formatting extends \Twig_Extension
+class Formatting extends Twig_Extension
 {
 
     /**
@@ -74,7 +75,7 @@ class Formatting extends \Twig_Extension
      */
     public function humanizeFilter($str)
     {
-        return \Zms5Library\Helper\NamingConvention::toHuman(\Zms5Library\Helper\NamingConvention::fromSpinalOrTrain($str));
+        return \Hopeter1018\Helper\NamingConvention::toHuman(\Hopeter1018\Helper\NamingConvention::fromSpinalOrTrain($str));
     }
 
     /**

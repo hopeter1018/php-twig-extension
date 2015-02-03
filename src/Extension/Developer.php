@@ -6,9 +6,10 @@
  * and open the template in the editor.
  */
 
-namespace Zms5Library\TwigExtension\Extension;
+namespace Hopeter1018\TwigExtension\Extension;
 
 use Twig_SimpleFilter;
+use Twig_Extension;
 
 /**
  * Group of extension for twig developers<br />
@@ -17,7 +18,7 @@ use Twig_SimpleFilter;
  * @version $id$
  * @author peter.ho
  */
-class Developer extends \Twig_Extension
+class Developer extends Twig_Extension
 {
 
     /**
