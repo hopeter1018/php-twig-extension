@@ -37,8 +37,8 @@ final class TwigGetter
 
             static::$loader->addPath(APP_WORKBENCH_ROOT);
             static::$loader->addPath(\Hopeter1018\Framework\SystemPath::twigCommonHintPath());
-//            static::$loader->addPath(\Hopeter1018\Framework\SystemPath::twigCommonHintPath('extends'));
-//            static::$loader->addPath(\Hopeter1018\Framework\SystemPath::twigCommonHintPath('embed'));
+            static::$loader->addPath(\Hopeter1018\Framework\SystemPath::twigCommonHintPath('extends'));
+            static::$loader->addPath(\Hopeter1018\Framework\SystemPath::twigCommonHintPath('embed'));
         }
         return static::$loader;
     }
@@ -69,9 +69,10 @@ final class TwigGetter
     {
         if (static::$environment === null) {
             static::$environment = new \Twig_Environment(
-                static::getLoader(), array (
-                'debug' => APP_IS_DEV,
-                'cache' => APP_TWIG_CACHE,
+                static::getLoader(),
+                array (
+                    'debug' => APP_IS_DEV,
+                    'cache' => APP_TWIG_CACHE,
                 )
             );
             static::plugExtensions();
