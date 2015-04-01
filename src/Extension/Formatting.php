@@ -10,6 +10,7 @@ namespace Hopeter1018\TwigExtension\Extension;
 
 use Twig_SimpleFilter;
 use Twig_Extension;
+use Hopeter1018\Helper\NamingConvention;
 
 /**
  * Group of text-formatting extension for twig
@@ -75,7 +76,7 @@ class Formatting extends Twig_Extension
      */
     public function humanizeFilter($str)
     {
-        return \Hopeter1018\Helper\NamingConvention::toHuman(\Hopeter1018\Helper\NamingConvention::fromSpinalOrTrain($str));
+        return NamingConvention::toHuman(NamingConvention::fromCamelOrPascal($str));
     }
 
     /**
