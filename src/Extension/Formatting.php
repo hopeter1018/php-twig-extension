@@ -50,6 +50,8 @@ class Formatting extends Twig_Extension
                 $result = null;
                 if (is_bool($array[$key])) {
                     $result = $array[$key] ? $key : '';
+                } elseif (is_int($array[$key])) {
+                    $result = $key . '=' . $array[$key] . '';
                 } else {
                     $result = $key . '="' . $array[$key] . '"';
                 }
