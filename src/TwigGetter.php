@@ -9,6 +9,7 @@
 namespace Hopeter1018\TwigExtension;
 
 use Hopeter1018\FileOperation\Path;
+use Hopeter1018\Framework\SystemPath;
 
 /**
  * Description of TwigGetter
@@ -36,9 +37,9 @@ final class TwigGetter
             !is_dir(APP_TWIG_CACHE) and mkdir(APP_TWIG_CACHE, 0777, true);
 
             static::$loader->addPath(APP_WORKBENCH_ROOT);
-            static::$loader->addPath(\Hopeter1018\Framework\SystemPath::twigCommonHintPath());
-            static::$loader->addPath(\Hopeter1018\Framework\SystemPath::twigCommonHintPath('extends'));
-            static::$loader->addPath(\Hopeter1018\Framework\SystemPath::twigCommonHintPath('embed'));
+            static::$loader->addPath(SystemPath::twigCommonHintPath());
+            static::$loader->addPath(SystemPath::twigCommonHintPath('extends'));
+            static::$loader->addPath(SystemPath::twigCommonHintPath('embed'));
         }
         return static::$loader;
     }
